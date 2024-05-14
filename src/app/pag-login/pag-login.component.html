@@ -1,0 +1,238 @@
+
+<header id="header" #headerLogin>
+    <img src="../../assets/image/bol.png">
+    <img src="../../assets/image/bol.png">
+    <img src="../../assets/image/bol.png">
+
+    <section id="sectionPostLogin"  >
+        <img id="logoLogin"   src="../../assets/image/logoComplet2.png"> 
+        <div id="titLogin" #titLogin>
+            <h1>CHATEA CON TOTAL PRIVACIDAD</h1>
+            <div id="descriptionIntro">
+               
+                 <p>Prioriza tu privacidad , SecurioChat mantiene alejados a los "man in the middler" que podrian capturar y ver tus conversaciones, comprueba en los chat de abajo que pasaria si usas SecurioChat o si no lo usas.</p>
+            </div>
+        </div>
+
+
+        <div id="chats">
+
+         
+
+            <div id="chatIndividual" #chatIndividual>
+                <div class="chatsIndividualLeft">
+                <header id="userLeft">
+                <img src="../../assets/image/Logo.png">
+                <p>Con SecurioChat</p>
+                
+            </header>
+
+            <div id="conversleft" #conversleft>
+                <p>No hace falta registrarse, pon solo un nombre de usuario</p> 
+                <p>No pedimos ningún dato tuyo</p> 
+                <p>Ni nosotros sabemos que se esta enviando, haz una prueba en este chat 🤫🤫 </p>
+                
+
+               
+                </div>
+            <form id="chatProff">
+            <input type="text" maxlength="50"  id ="WritterChat" #WritterChat placeholder="Escribe algo aqui " >
+            <img  (click)="endMenssageLeft()" src="../../assets/image/avion.png">
+           
+
+        </form>
+        </div>
+   
+   
+
+        <div id="wordMove" #wordMove >
+             <span id="moveWordLeft" #moveWordLeft></span>
+             
+             <div id="imgEscudo">
+              
+                <img #imgLock style="opacity: 0;"src="../../assets/image/lookOpen.png" #imgPadlockOpne>
+                <img src="../../assets/image/LookClosed.png" #imgPadlockClosed style="display: none;">
+            </div>
+    
+                <div id="moveWordRight" #moveWordRight></div>  
+        </div>
+   
+        <div id="chatSniff" #chatSniff >
+            <header id="userSniff">
+                <img src="../../assets/image/Man.png">
+                <p>Man in the middler</p>
+                
+            </header>
+
+            
+            <div id="conversSniffer" #conversSniffer>
+         
+
+            </div>
+            <div id="messajeSniffer">
+             
+            </div>
+        </div>
+
+        <div class="chatsIndividualRight" > 
+            <header id="userRight">
+                <img src="../../assets/image/userImg.png">
+                <p>Sin SecurioChat</p>
+                
+            </header>
+            <div id="conversRight" #conversRight>
+                <p>Conversaciones cifradas</p> 
+                <p>Se libre de escribir lo que quieras</p> 
+                <p>Pulsa en "Empieza ya" para chatear</p>
+                <p>🔐🔐🔒</p>
+                </div>
+
+                <form id="chatProff" >
+                    
+                    <input type="text"  id ="WritterChat" #writterChatRight placeholder="Escribe algo aqui ">
+                
+                    <img  (click)="endMessageRight()" src="../../assets/image/avion.png">
+        
+                </form>
+        
+        </div>
+         </div>
+        </div>
+
+
+       
+
+      
+
+
+    </section>
+    
+    <div id="buttonLogin">
+    <button #letGo id="viewLogin" (click)="viewLogin()">EMPIEZA YA</button>
+    </div>
+
+</header>
+
+<div id="fondoBlur" #fondoBlur (click)="quitLogin()" ></div>
+
+
+<section id="manMidler">
+    <h1>¿Que es un "Man in the middler" y por que es tan importante protegerte de este tipo de ataques?</h1>
+           
+           <div id="titleDescription">
+               
+               <p>Un "man-in-the-middle" (MITM) es un tipo de ataque informático en el que un tercero intercepta y potencialmente altera la comunicación entre dos partes que creen estar comunicándose directamente entre sí. En este tipo de ataque, el atacante se coloca entre el emisor y el receptor, interceptando los mensajes y actuando como intermediario sin
+                    que las partes involucradas lo sepan.</p>
+                    <img src="../../assets/image/manMidler.png">
+   
+           </div>
+   
+   
+       </section>
+<section id="descriptionSecurio">
+    
+    <img src="../../assets/image/selloLogo.png">
+            <div id="titleDescriptionSecirio">
+                <h1>¿Por qué SecurioChat?</h1>
+                <p>¿Preocupado por la seguridad y privacidad de tus conversaciones en línea? Nuestra aplicación utiliza tecnología de cifrado de extremo a extremo para proteger tus mensajes de cualquier intento de interceptación por parte de 'man-in-the-middle'. Esto significa que tus comunicaciones solo son legibles por ti y el destinatario, manteniendo tus conversaciones 
+                    confidenciales y seguras..</p>
+                    
+            </div>
+       
+       
+ </section>
+
+ <!--Part of login-->  
+
+<section id="sectionLogin" #sectionLogin >
+
+ 
+     <form  id="partForm"  method="POST"  >
+
+
+       <input type="image" id="img"   [src]="imagen"   accept="image/*" ><br><br>
+        <input type="file"  #fileInput  (change)="changeImg($event)"   id="fileInput"     style="display: none;"><br>
+        <label id="fileInput"  for="fileInput" >imagen</label>
+    
+   
+      <input type="text"  id="userName" name="nombre"  #username placeholder=" Usuario" required [(ngModel)]="nameUser"><br>
+      <input type="text"  id="nameServer" name="servidor"  #username placeholder=" Server" required [(ngModel)]="nameServer"><br>
+
+        <input type="submit" id="login" value="Login" #buttonLogin (click)="formHttp()" ><br>
+        <div id="contactoLogin">
+            
+            <a href="https://www.linkedin.com/in/h%C3%A9ctor-p%C3%A9rez-d%C3%ADaz-9b47752a1/" target="_blank" title="linkedin">
+     
+        
+            </a>
+     
+            <a href="https://github.com/dashboard" target="_blank" title="GitHub">
+             
+         
+            </a>
+       
+         </div>
+     
+    
+        </form>
+  
+    <div id="partHello">
+        <div id="information">
+            <div id="helloImg">
+                <h1>Welcome</h1>
+        
+            </div>
+            <div id="explication">
+
+                <ul>
+                    <li style="color: brown;">
+                       IMPORTANTE ¡Pon un nombre en el servidor , con ese nombre se conectará tambien tu contacto!
+                    </li>
+                    <li>
+                       Elige una imagen que te caracterize.
+                    </li>
+                    <li>
+                        Usar SecurioChatInLive con seguridad.
+                     </li>
+                </ul>
+
+            </div>
+        </div>
+     
+
+
+    </div>
+
+
+
+
+</section>
+
+
+
+<footer id="footer">
+    <div id="nameContacto">
+        <img src="../../assets/image/logoCompleto.png">
+    
+    </div>
+    
+    <div id="contactoFoteer">
+       <a href="https://www.linkedin.com/in/h%C3%A9ctor-p%C3%A9rez-d%C3%ADaz-9b47752a1/" target="_blank" title="linkedin">
+
+        <img src="../../assets/image/linkedin.png">
+
+       </a>
+
+       <a href="https://github.com/dashboard" target="_blank" title="GitHub">
+        
+        <img src="../../assets/image/gitHub.png">
+       </a>
+  
+    </div>
+
+    <div id="nameFoteer">
+        <p>&copy; 2024 Héctor Pérez Díaz.</p>
+       
+
+    </div>
+</footer>

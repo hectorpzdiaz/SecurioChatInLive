@@ -1,1 +1,100 @@
 /* You can add global styles to this file, and also import other style files */
+
+html{
+
+    font-size: 100%;
+    box-sizing: border-box;
+    }
+    
+    body{
+        margin: 0;
+        padding: 0;
+        
+    
+    }
+    
+    
+    
+    
+    .content {
+        position:absolute;
+        right: 0.8rem;
+        width: auto;
+        max-width: 85%;
+         padding: 0.6rem;
+         background-color: #0084FF;
+         border-radius: 0.6rem;
+         color: #ffffff;
+         word-wrap: break-word;
+     
+     }
+     .content2 {
+        position:absolute;
+        left: 0.8rem;
+        padding: 0.6rem;
+        width: auto;
+        max-width: 85%;
+        background-color: #e9e9e9;
+        color: #050505;
+        border-radius:  0.6rem;
+        word-wrap: break-word;
+       
+     
+     }
+     .contentSniff {
+       position:absolute;
+       left: 2.3rem;
+       padding: 0.25rem;
+       width: auto;
+       max-width: 70%;
+       background-color: #e9e9e9;
+       color: #050505;
+       border-radius: 2px;
+       word-wrap: break-word;
+       overflow-y: none;
+      
+    
+    }
+    
+    
+     /*tablet*/
+  
+         
+          
+    
+ @media screen and (max-width: 1280px){
+    
+    
+     
+    html{
+      font-size: 55%;
+    }
+          
+          
+           
+   
+    
+    }
+            
+      
+       
+      
+
+    
+    
+    /*phone*/
+    
+    @media screen and (max-width: 799px){
+    
+    
+     
+       html{
+          font-size: 40%;
+       }
+          
+       }
+      
+        
+       
+      
+      

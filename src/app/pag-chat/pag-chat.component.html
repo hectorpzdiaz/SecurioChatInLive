@@ -1,0 +1,60 @@
+<div #contentFather id="contentFather">
+    <div id="decorator"></div>
+    <div id="chatFather">
+     
+        <header  #headerChat id="headerChat">
+            <div id="imgeName">
+                <img src="../../assets/image/userImg.png"  #imgUser id="imgUser " >
+                <h2 #nameUser id="nameUser " >Nombre</h2>
+                
+            </div>
+            <div id="logoServer">
+              
+            <h3 id="contentServer">Servidor: <span #nameServer id="nameServer"></span></h3>
+            <img src="../../assets/image/Logo.png" >
+            
+        </div>
+                
+            
+          
+                <div id="dark" #dark>
+                 <div #buttonDark  id="buttonDark" (click)="buttonLight()" >
+                     <img #imgDark src="../../assets/image/day.png">
+                    </div>
+                </div>
+           
+
+        </header>
+        <section #ConverssationChat id="ConverssationChat">
+          <div #ContentMessages class="ContentMessages">
+            <div class="message right"*ngFor="let item of messageList"
+            [ngClass] ="{
+                 'left' : item.message_side === 'receiver',
+                   'right' : item.message_side === 'sender'
+                  }">  
+          
+              <img src={{item.imgUser}} class="avatar">
+              <div class="text_wrapper">
+            
+                <div class="text">{{item.message}}</div>
+            </div>
+            </div>
+          </div>
+            <footer #messageFather id="messageFather">
+                <div id="messageChild"> 
+                     <input id="inputMessage" type="text" placeholder="Mensage..." [(ngModel)]="messageInput">
+                     <div id="iconSend">
+                        <img id="emoticon" src="../../assets/image/emoticono.png">
+                        <button (click)="sendMessageChat()">Enviar</button>
+                    </div>
+                 </div>
+    
+            </footer>
+        </section>
+       
+
+
+    </div>
+
+
+</div>

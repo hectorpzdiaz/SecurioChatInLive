@@ -28,7 +28,7 @@
     <li><strong>Creando un Chat:</strong> Haga clic en "EMPIEZA YA" y genere un enlace de chat único.</li>
     
     
-<li style="color:red"><strong>IMPORTANTE:</strong> EL nombre del servidor tiene que ser el mismo que el que va a usar tu contacto.</li>
+<li style="color:red"><strong style="color: red;">IMPORTANTE:</strong> EL nombre del servidor tiene que ser el mismo que el que va a usar tu contacto.</li>
     
     <
 <li><strong>Chateando:</strong> Intercambie mensajes sabiendo que están encriptados y se eliminarán automáticamente una vez que finalice el chat.</li>

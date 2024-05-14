@@ -38,10 +38,10 @@
 
 
 
-<
+
 <h2>Tecnologías Utilizadas</h2>
 
-<
+
 <ul>
     
     

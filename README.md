@@ -30,7 +30,7 @@
     
 <li ><strong >IMPORTANTE:</strong> EL nombre del servidor tiene que ser el mismo que el que va a usar tu contacto.</li>
     
-    <
+    
 <li><strong>Chateando:</strong> Intercambie mensajes sabiendo que están encriptados y se eliminarán automáticamente una vez que finalice el chat.</li>
 
 </ol

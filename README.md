@@ -17,7 +17,7 @@
   
 <li><strong>Comunicación Segura:</strong> Los usuarios pueden chatear con sus amigos o colegas sabiendo que sus conversaciones son privadas y que personas no autorizadas no pueden acceder a ellas.</li>
 
-</u
+
 </ul>
 
 <h2>Cómo Utilizar</h2>

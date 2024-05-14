@@ -53,12 +53,11 @@
    
 <li><strong>Seguridad:</strong> Cifrado de extremo a extremo (usando bibliotecas como CryptoJS), Autenticación basada en sesiones</li>
 
-</
+
 </ul>
 
 <h2>Contribuyendo</h2>
 
-<
 <p>¡Las contribuciones a SecurioChatEnLive son bienvenidas! Si tiene ideas sobre funciones, mejoras o correcciones de errores, no dude en enviar una solicitud de extracción.</p>
 
 

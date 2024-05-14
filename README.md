@@ -1,5 +1,5 @@
 
-SecurioChatEnLive
+<h1>SecurioChatEnLive</h1>
 SecurioChatInLive es una aplicación web de mensajería segura diseñada para facilitar conversaciones privadas entre usuarios sin preocuparse por la interceptación de terceros. Esta plataforma garantiza que los mensajes estén cifrados de extremo a extremo y que las conversaciones sean efímeras, lo que significa que se eliminan automáticamente una vez que los usuarios abandonan la sesión de chat. Este enfoque maximiza la privacidad y la seguridad de los usuarios.
 
 Características

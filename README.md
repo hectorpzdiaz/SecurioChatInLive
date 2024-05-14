@@ -1,11 +1,5 @@
 
-<title>SecurioChatEnLive</title>
 
-</head
-
-<
-</head>
-<body>
 
 <h1>SecurioChatEnLive</h1>
 
@@ -31,10 +25,10 @@
     
   
 <li><strong>Accediendo a la Aplicación:</strong> Visite SecurioChatEnLive en su navegador web.</li>
-    <li><strong>Creando un Chat:</strong> Haga clic en "Iniciar nuevo chat" y genere un enlace de chat único.</li>
+    <li><strong>Creando un Chat:</strong> Haga clic en "EMPIEZA YA" y genere un enlace de chat único.</li>
     
     
-<li><strong>Invitar Amigos:</strong> Comparta el enlace generado con sus amigos para comenzar a chatear de forma segura.</li>
+<li style="color=red"><strong>IMPORTANTE:</strong> EL nombre del servidor tiene que ser el mismo que el que va a usar tu contacto.</li>
     
     <
 <li><strong>Chateando:</strong> Intercambie mensajes sabiendo que están encriptados y se eliminarán automáticamente una vez que finalice el chat.</li>

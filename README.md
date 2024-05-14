@@ -1,27 +1,38 @@
-# SecurioChatInLive
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 17.3.4.
+SecurioChatEnLive
+SecurioChatInLive es una aplicación web de mensajería segura diseñada para facilitar conversaciones privadas entre usuarios sin preocuparse por la interceptación de terceros. Esta plataforma garantiza que los mensajes estén cifrados de extremo a extremo y que las conversaciones sean efímeras, lo que significa que se eliminan automáticamente una vez que los usuarios abandonan la sesión de chat. Este enfoque maximiza la privacidad y la seguridad de los usuarios.
 
-## Development server
+Características
+Cifrado de extremo a extremo : todos los mensajes enviados a través de SecurioChatInLive están cifrados, lo que garantiza que solo el remitente y el destinatario puedan leerlos.
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+Conversaciones Efímeras : Los mensajes y conversaciones no se almacenan en ningún servidor o base de datos. Una vez que finaliza la sesión de chat, todos los mensajes se eliminan permanentemente.
 
-## Code scaffolding
+Comunicación segura : los usuarios pueden chatear con sus amigos o colegas sabiendo que sus conversaciones son privadas y que personas no autorizadas no pueden acceder a ellas.
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+Cómo utilizar
+Accediendo a la Aplicación :
 
-## Build
+Visite SecurioChatInLive en su navegador web.
+Creando un chat :
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+Haga clic en "Iniciar nuevo chat" y genere un enlace de chat único.
+Invitar amigos :
 
-## Running unit tests
+Comparte el enlace generado con tus amigos para comenzar a chatear de forma segura.
+Charlando :
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+Intercambie mensajes sabiendo que están encriptados y se eliminarán automáticamente una vez que finalice el chat.
+Tecnologías utilizadas
+Interfaz :
 
-## Running end-to-end tests
+Realizado con Angular
+Parte trasera :
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+Spring
+Socket.io (para comunicación en tiempo real)
+Seguridad :
 
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+Cifrado de extremo a extremo (usando bibliotecas como CryptoJS)
+Autenticación basada en sesiones
+Contribuyendo
+¡Las contribuciones a SecurioChatInLive son bienvenidas! Si tiene ideas sobre funciones, mejoras o correcciones de errores, no dude en enviar una solicitud de extracción.

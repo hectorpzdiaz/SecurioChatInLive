@@ -36,6 +36,7 @@
 </ol
 
 <img src="src/assets/image/example.png" widht="80px" height="80px">
+<img src="src/assets/image/logoComplet2.png" widht="80px" height="80px">
 
 <h2>Tecnologías Utilizadas</h2>
 

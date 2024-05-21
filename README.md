@@ -58,4 +58,4 @@
 
 <p>¡Las contribuciones a SecurioChatEnLive son bienvenidas! Si tiene ideas sobre funciones, mejoras o correcciones de errores, no dude en enviar una solicitud de extracción.</p>
 
-<img src="src/assets/image/logoComplet2.png">
+<img src="src/assets/image/logoComplet2.png" widht="10rem">

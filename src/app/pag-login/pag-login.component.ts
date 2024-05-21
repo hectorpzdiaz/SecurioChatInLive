@@ -1,5 +1,8 @@
-import { Component, ElementRef, OnInit, ViewChild,HostListener, viewChild, COMPILER_OPTIONS} from '@angular/core';
-import { FormsModule  } from '@angular/forms';
+import { Component, ElementRef, OnInit, ViewChild,HostListener, viewChild, COMPILER_OPTIONS,Renderer2} from '@angular/core';
+import { FormsModule } from '@angular/forms';
+import { NgIf } from '@angular/common';
+
+
 import { HttpClient } from '@angular/common/http';
 import { Subscription , pluck} from 'rxjs';
 import {ChatService} from '../service/chat.service'
@@ -11,7 +14,7 @@ import {ChatService} from '../service/chat.service'
 @Component({
   selector: 'app-pag-login',
   standalone: true,
-  imports: [FormsModule],
+  imports: [FormsModule,NgIf],
   templateUrl: './pag-login.component.html',
   styleUrl: './pag-login.component.css'
 })
@@ -38,37 +41,50 @@ export class PagLoginComponent {
   @ViewChild('wordSniffer') wordSniffer! : ElementRef<HTMLDivElement>
   @ViewChild('imgLock')imgLock! : ElementRef<HTMLImageElement>
   @ViewChild('chatIndividual')chatIndividual! : ElementRef<HTMLDivElement>
+  @ViewChild('fondHeader')fondHeader! : ElementRef<HTMLDivElement>
+  @ViewChild('manMidler')manMidler! : ElementRef
+  @ViewChild('descriptionSecurio')descriptionSecurio! : ElementRef
+  @ViewChild('datesSocialPhone')datesSocialPhone! : ElementRef
+
+  public user : String =""
+  public server : String =""
+
+  
+
+
  private tamañoPantalla = window.innerWidth;
+ private sizeWindows = window.innerWidth;
 
 
 
 
 
+  constructor( private chatService : ChatService ,private http : HttpClient,private renderer: Renderer2 ){
+   }
 
-  constructor( private chatService : ChatService ,private http : HttpClient){
-   
-
-  
-  }
-
-  
  
-
-  ngOnInit(): void {
-
-
-   
-
-
-  }
-
-
-
-
-
   numLeft: number = 14;
   numRight: number = 13;
   
+
+  ngOnInit(): void {
+ 
+
+    if(this.sizeWindows <= 799 ){
+      this.renderer.setStyle(document.documentElement, 'font-size','40%');
+    
+    } else{
+   
+    }
+
+
+  
+
+  }
+
+
+
+
 
                 //chat Left
 
@@ -91,7 +107,6 @@ export class PagLoginComponent {
     }
  
     
- 
  
 
     if (moveWordLeft  ) {
@@ -120,7 +135,7 @@ export class PagLoginComponent {
   const word : string | null =  this.WritterChat.nativeElement.value.trim()
 
   if(word != ""){
-    console.log("entro")
+ 
 
     
     this.chatSniff.nativeElement.style.transition = ' all 0.5s ';
@@ -313,23 +328,25 @@ setTimeout(() =>{
 viewLogin(){
 
   
-  this.fondoBlur.nativeElement.style.display = 'block'
+  this.fondoBlur.nativeElement.style.display="block"
+  this.fondoBlur.nativeElement.style.zIndex = '2'
+
   this.sectionLogin.nativeElement.style.transition = 'all 0.2s ease-in-out';
   this.sectionLogin.nativeElement.style.opacity = "1"
-  this.sectionLogin.nativeElement.style.zIndex = '2'
+  this.sectionLogin.nativeElement.style.zIndex = '3'
 
 
+  
 }
 
 
 quitLogin(){
 
-  this.fondoBlur.nativeElement.style.display = 'none'
   this.sectionLogin.nativeElement.style.opacity = "0"
   this.sectionLogin.nativeElement.style.transition = 'all 0s ease-in-out';
-  this.sectionLogin.nativeElement.style.zIndex = '-1'
+  this.sectionLogin.nativeElement.style.zIndex = '-2'
 
-
+  this.fondoBlur.nativeElement.style.display="none"
 
 
 }
@@ -474,10 +491,6 @@ chatMessageRight(word : string | null){
   this.conversRight?.nativeElement.appendChild(content)
   const div2 = this.conversRight.nativeElement
   div2.scrollTop = div2.scrollHeight;
-  console.log(div2.scrollHeight, div2.scrollTop )
-
- 
-
 
 
 }
@@ -576,7 +589,22 @@ setTimeout(() => {
 
 }
 
+private clickSocial = 0;
+openSocial(){
 
+  if(this.clickSocial ==0){
+    this.datesSocialPhone.nativeElement.style.opacity="1"
+    this.clickSocial++
+  }else{
+    this.datesSocialPhone.nativeElement.style.opacity="0"
+
+    this.clickSocial--
+
+
+  }
+
+
+}
 
 
 // Server
@@ -621,11 +649,8 @@ changeImg(event : any){
 
   this.chatService.setMetadatesUser(medaDatesForm)
 
-  console.log(medaDatesForm)
-
-
- 
- var  subscriptiom : Subscription = this.http.post<any>('https://securiochat.onrender.com/login', medaDatesForm).subscribe((datesResponse)=>{
+  
+ var  subscriptiom : Subscription = this.http.post<any>('https://securioserver.onrender.com/login', medaDatesForm).subscribe((datesResponse)=>{
 
   this.chatService.setObservableAccess(datesResponse.access)
 

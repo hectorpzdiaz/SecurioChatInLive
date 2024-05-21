@@ -1,11 +1,43 @@
 
 <header id="header" #headerLogin>
-    <img src="../../assets/image/bol.png">
-    <img src="../../assets/image/bol.png">
-    <img src="../../assets/image/bol.png">
+<div id="fondHeader" #fondHeader></div>
+    <nav id="navHeader">
+        <img id="logoLogin"   src="../../assets/image/logoCompleto.png"> 
+        <div id="brower" >
+            <h3 (click)="viewLogin()"  >Acceder</h3>
+            <a class="emoticonSocial" href="https://www.linkedin.com/in/h%C3%A9ctor-p%C3%A9rez-d%C3%ADaz-9b47752a1/" target="_blank" title="linkedin">
+
+                <img src="../../assets/image/linkedin.png">
+        
+               </a>
+        
+               <a class="emoticonSocial" href="https://github.com/dashboard" target="_blank" title="GitHub">
+                
+                <img src="../../assets/image/gitHub-nav.png">
+               </a> 
+        </div>
+        <button (click)="openSocial()" id="openSocial"  >
+          <img  src="../../assets/image/menu.png">
+
+        </button>
+    </nav>
+
+    <div id="datesSocialPhone" #datesSocialPhone style="opacity: 0;">  
+      <span (click)="viewLogin()"  >Acceder <img src="../../assets/image/open.png"></span>
+        <a class="emoticonSocial" href="https://www.linkedin.com/in/h%C3%A9ctor-p%C3%A9rez-d%C3%ADaz-9b47752a1/" target="_blank" title="linkedin">
+
+            <img src="../../assets/image/linkedin.png">
+    
+           </a>
+    
+           <a class="emoticonSocial" href="https://github.com/dashboard" target="_blank" title="GitHub">
+            
+            <img src="../../assets/image/gitHub-nav.png">
+           </a> </div>
+
 
     <section id="sectionPostLogin"  >
-        <img id="logoLogin"   src="../../assets/image/logoComplet2.png"> 
+      
         <div id="titLogin" #titLogin>
             <h1>CHATEA CON TOTAL PRIVACIDAD</h1>
             <div id="descriptionIntro">
@@ -83,7 +115,7 @@
             <div id="conversRight" #conversRight>
                 <p>Conversaciones cifradas</p> 
                 <p>Se libre de escribir lo que quieras</p> 
-                <p>Pulsa en "Empieza ya" para chatear</p>
+                <p>Pulsa en "Iniciar Sesión" para chatear</p>
                 <p>🔐🔐🔒</p>
                 </div>
 
@@ -104,19 +136,19 @@
 
       
 
-
+        <div id="buttonLogin">
+            <button #letGo id="viewLogin" (click)="viewLogin()">Iniciar Sesión</button>
+            </div>
     </section>
     
-    <div id="buttonLogin">
-    <button #letGo id="viewLogin" (click)="viewLogin()">EMPIEZA YA</button>
-    </div>
+
 
 </header>
 
 <div id="fondoBlur" #fondoBlur (click)="quitLogin()" ></div>
 
 
-<section id="manMidler">
+<section id="manMidler" #manMidler>
     <h1>¿Que es un "Man in the middler" y por que es tan importante protegerte de este tipo de ataques?</h1>
            
            <div id="titleDescription">
@@ -129,7 +161,7 @@
    
    
        </section>
-<section id="descriptionSecurio">
+<section id="descriptionSecurio" #descriptionSecurio>
     
     <img src="../../assets/image/selloLogo.png">
             <div id="titleDescriptionSecirio">
@@ -146,32 +178,24 @@
 
 <section id="sectionLogin" #sectionLogin >
 
- 
-     <form  id="partForm"  method="POST"  >
+    <img src="../../assets/image/Logo.png">
+       
+     <form  id="partForm" #loginForm="ngForm" method="POST" (ngSubmit)="formHttp()" >
 
-
+        <button id="quitLogin" (click)="quitLogin()" >X</button>
        <input type="image" id="img"   [src]="imagen"   accept="image/*" ><br><br>
         <input type="file"  #fileInput  (change)="changeImg($event)"   id="fileInput"     style="display: none;"><br>
         <label id="fileInput"  for="fileInput" >imagen</label>
     
    
-      <input type="text"  id="userName" name="nombre"  #username placeholder=" Usuario" required [(ngModel)]="nameUser"><br>
-      <input type="text"  id="nameServer" name="servidor"  #username placeholder=" Server" required [(ngModel)]="nameServer"><br>
-
-        <input type="submit" id="login" value="Login" #buttonLogin (click)="formHttp()" ><br>
-        <div id="contactoLogin">
-            
-            <a href="https://www.linkedin.com/in/h%C3%A9ctor-p%C3%A9rez-d%C3%ADaz-9b47752a1/" target="_blank" title="linkedin">
-     
-        
-            </a>
-     
-            <a href="https://github.com/dashboard" target="_blank" title="GitHub">
-             
-         
-            </a>
-       
-         </div>
+      <input type="text"  id="userName" name="nombre"  #username="ngModel" placeholder=" Usuario" maxlength="10"  required  [(ngModel)]="nameUser"  ><br>
+      <div class="required" style="color: brown;" > - Nombre usuario requerido .</div><br>
+    
+      <input type="text"  id="nameServer" name="servidor"  #Server="ngModel" placeholder=" Servidor" maxlength="10" required [(ngModel)]="nameServer"><br>
+      <div class="required"  style="color: brown;" > - Nombre servidor requerido.</div>
+        <input type="submit" id="login" value="Acceder" #buttonLogin  [disabled]="loginForm.invalid"><br><br>
+        <h1>  IMPORTANTE ¡Pon un nombre en el servidor , con ese nombre se conectará tambien tu contacto!</h1>
+   
      
     
         </form>
@@ -179,7 +203,7 @@
     <div id="partHello">
         <div id="information">
             <div id="helloImg">
-                <h1>Welcome</h1>
+                <h2>Welcome</h2>
         
             </div>
             <div id="explication">

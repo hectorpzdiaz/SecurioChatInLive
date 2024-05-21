@@ -54,7 +54,7 @@ getMetadatesUser(){
 
 initConnectionSocjet(){
 
-  const url = 'https://securiochat.onrender.com';
+  const url = 'https://securioserver.onrender.com/chat-socket';
   const socket = new SockJS(url)
   this.stomClient = Stomp.over(socket);
 

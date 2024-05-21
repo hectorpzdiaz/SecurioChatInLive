@@ -25,7 +25,7 @@
     
   
 <li><strong>Accediendo a la Aplicación:</strong> Visite SecurioChatEnLive en su navegador web.</li>
-    <li><strong>Creando un Chat:</strong> Haga clic en "EMPIEZA YA" y genere un enlace de chat único.</li>
+    <li><strong>Creando un Chat:</strong> Haga clic en "Iniciar sesión" y genere un enlace de chat único.</li>
     
     
 <li ><strong >IMPORTANTE:</strong> EL nombre del servidor tiene que ser el mismo que el que va a usar tu contacto.</li>
@@ -57,3 +57,5 @@
 <h2>Contribuyendo</h2>
 
 <p>¡Las contribuciones a SecurioChatEnLive son bienvenidas! Si tiene ideas sobre funciones, mejoras o correcciones de errores, no dude en enviar una solicitud de extracción.</p>
+
+<img src="src/assets/image/logoComplet2.png">

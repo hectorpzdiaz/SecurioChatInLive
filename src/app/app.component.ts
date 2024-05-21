@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit ,Renderer2} from '@angular/core';
 import {ModuleAppModule} from '../../src/app/module-app/module-app.module'
 import { Router } from '@angular/router';
 import {ChatService} from '../app/service/chat.service'
@@ -13,10 +13,9 @@ import {ChatService} from '../app/service/chat.service'
   styleUrl: './app.component.css'
 })
 export class AppComponent implements OnInit {
-  
- 
-  constructor(private router : Router, private chatService : ChatService){}
 
+ 
+  constructor(private router : Router, private chatService : ChatService,private renderer: Renderer2){}
 
 
 ngOnInit(): void {
@@ -30,7 +29,7 @@ this.initRouter()
 
 
 initRouter(){
-  this.router.navigate(["/home"])
+  this.router.navigate(["home"])
   
 }
 
@@ -40,7 +39,7 @@ navigateRouter(){
   var acces : boolean = false;
 
   this.chatService.getObservableAccess().subscribe((date) =>{
-    console.log("entro")
+  
     acces = date
     if(acces == false){
   

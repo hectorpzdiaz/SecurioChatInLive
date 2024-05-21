@@ -33,9 +33,9 @@
     
 <li><strong>Chateando:</strong> Intercambie mensajes sabiendo que están encriptados y se eliminarán automáticamente una vez que finalice el chat.</li>
 
-</ol
+</ol>
 
-<img src="src/assets/image/example.png" widht="80px" height="80px">
+<img src="src/assets/image/example.png" widht="200px" height="200px">
 
 <h2>Tecnologías Utilizadas</h2>
 
@@ -59,4 +59,3 @@
 <p>¡Las contribuciones a SecurioChatEnLive son bienvenidas! Si tiene ideas sobre funciones, mejoras o correcciones de errores, no dude en enviar una solicitud de extracción.</p>
 
 <img src="src/assets/image/logoComplet2.png" widht="80px" height="80px">
-<img src="src/assets/image/example.png" widht="80px" height="80px">

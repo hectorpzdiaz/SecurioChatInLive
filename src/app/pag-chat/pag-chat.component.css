@@ -43,7 +43,7 @@
     border-top-left-radius: 10px;
     justify-content: space-between;
     align-items: center;
-
+    position: relative;
     z-index: 1;
     display: flex;
 
@@ -91,14 +91,12 @@
 #logoServer{
   display: flex;
   align-items: center;
- 
   gap: 10px;
 }
 #contentServer{
  
   border-top-right-radius: 4px;
   border-top-left-radius: 4px;
-
   color: #dddfe0;
   display: flex;
   justify-content: center;
@@ -112,25 +110,60 @@
     height: 2rem;
   }
 
+  #menuDarkExit{
   
+    height: 2rem;
+    cursor: pointer;
+  }
+
+#contentMenu{
+  position: absolute;
+  right: 0.6rem;
+  top: -7rem;
+  padding-top: 0.5rem;
+  box-sizing: border-box;
+  width: 12rem;
+  height: 6rem;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  z-index: 1;
+  background-color: #171A1D;
+ 
+}
+
+#contentMenu h4  {
+  color: white;
+  font-family: "Segoe UI", "Helvetica Neue", "Helvetica", "Lucida Grande", Arial, "Ubuntu", "Cantarell", "Fira Sans", sans-serif;
+  font-size: 0.9rem;
+  display: flex;
+  align-items: center;
+  gap: 10px ;
+  cursor: pointer;
+}
+#contentMenu h4 img {
+ width: 1.2rem;
+}
+
+
 #dark{
+  z-index: 2;
   width: 3.8rem;
   padding: 0.2rem;
   background-color: rgba(231, 231, 226, 1);
-  background-image: linear-gradient(176deg, rgba(231, 231, 226, 1) 23%, rgba(218, 208, 123, 1) 95%);
-  background-color: #292b2c;
+  background-image: linear-gradient(176deg, rgb(236, 236, 196) 23%, rgba(218, 208, 123, 1) 95%);
+  background-color: #1aa0e4;
   border-radius: 20rem;
   display: flex;
   align-items: center;
   border: 1px solid rgba(255, 255, 0, 0.76);
   transform: scale(0.76);
+  cursor: pointer;
   
 }
 #dark #buttonDark{
   width: 1.5rem;
   height: 1.4rem;
-
-
 
   display: flex;
   align-items: center;
@@ -154,17 +187,20 @@
     height: 100%;
     max-height: 100%;
     background-image: url(../../assets/image/fondChat.jpg);
-    background-size: 35% ;
+    background-size: 30% ;
     border-bottom-left-radius: 10px;
     border-bottom-right-radius: 10px;
     position: relative;
     display: flex;
+    align-items: center;
     flex-direction: column;
+    overflow: hidden;
    
 }
 
 .ContentMessages {
   position: relative;
+  width: 96%;
   max-width: 100%;
   height:70vh;
   overflow-y: auto;
@@ -270,7 +306,7 @@
 
   display: inline-block;
   line-height: 1.50rem;
-  border-radius: 5px;
+  border-radius: 10px;
   min-width: 8%;
   max-width: 80%;
   position: relative;
@@ -304,18 +340,23 @@
 #messageFather{
 
 
-    width: 100%;
-    padding: 0.5rem;
+    width: 97%;
+    padding: 0.2rem;
     box-sizing: border-box;
     border-bottom-left-radius: 10px;
     border-bottom-right-radius: 10px;
     position: absolute;
     display: flex;
-    bottom: 0;
+    bottom: 1rem;
     gap: 1rem;
     align-items: center;
-    justify-content: center
-    
+    justify-content: space-between;
+    background: #1aa0e4;
+  padding-right: 0.6rem;
+  padding-left: 0.6rem;
+
+    background-color: #2F2F2F;
+    border-radius: 60px;
 }
 
 
@@ -325,15 +366,16 @@
   
   font-family: "Segoe UI", "Helvetica Neue", "Helvetica", "Lucida Grande", Arial, "Ubuntu", "Cantarell", "Fira Sans", sans-serif;
   width: 90%;
-  height: 3rem;
-  border-radius: 10px;
+  height: 2.7rem;
   font-size: 0.93rem;
   padding: 0.5rem;
   font-weight: 400;
   box-sizing: border-box;
   color: rgb(250, 250, 250);
-  border: 1px solid gray;
-  background-color: rgb(41, 48, 65);
+  background: none;
+  border: none;
+
+
   
 
   
@@ -359,11 +401,11 @@ outline: none;
  
 }
 #messageFather button {
-  border: 1px solid black;
-  background-color: #ebedee;
-  border-radius: 5cqb ;
-  width: 3rem;
-  height: 3rem;
+  border: none;
+  background-color: #909192;
+  border-radius: 5rem ;
+  width: 2.4rem;
+  height: 2.4rem;
   cursor: pointer;
   display: flex;
   align-items: center;
@@ -398,6 +440,26 @@ transform: scale(0.9);
 }
 
 
+#contentMenu{
+  position: absolute;
+  right: 1.5rem;
+  padding: 1.1rem;
+  width: 20rem;
+  height: 10rem;
+  padding-top: 1.9rem;
+  padding-left: 2rem;
+ 
+
+ 
+}
+#contentMenu h4{
+ font-size: 1.7rem;
+
+ 
+}
+#contentMenu h4 img{
+ width: 1.8rem;
+ }
 #ConverssationChat{
 
   background-size: 55% ;
@@ -484,9 +546,6 @@ transform: scale(0.9);
   }
   
 
-  #messageFather {
-    margin-bottom: 0.5rem;
-  }
 
   #emoticon{
     width: 2.8rem;
@@ -494,7 +553,7 @@ transform: scale(0.9);
   }
 
 #inputMessage{
-height: 4.6rem; 
+height: 5rem; 
 font-size: 1.5rem;
 }
 
@@ -550,6 +609,27 @@ font-size: 1.5rem;
 
 
 }
+
+#contentMenu{
+  position: absolute;
+  right: 1.5rem;
+  padding: 1.1rem;
+  width: 16rem;
+  height: 10rem;
+  padding-top: 1.9rem;
+  top: -10rem;
+ 
+}
+
+
+#contentMenu h4{
+ font-size: 1.4rem;
+
+ 
+}
+#contentMenu h4 img{
+ width: 1.8rem;
+ }
 #imgeName img{
   width: 3.3rem;
   height: 3.3rem;
@@ -563,7 +643,7 @@ font-size: 1.5rem;
 
 
 #dark{
-  transform: scale(1.1);
+  transform: scale(1.2);
 
 }
 
@@ -615,14 +695,14 @@ font-size: 1.5rem;
   
   
   .ContentMessages .message .text_wrapper .text {
-    font-size: 1.4rem;
+    font-size: 1.5rem;
     line-height: 2rem;
   
   }
   
 
   #messageFather {
-    margin-bottom: 0.5rem;
+    margin-bottom: -0.5rem;
   }
 
   #emoticon{
@@ -631,18 +711,17 @@ font-size: 1.5rem;
   }
 
 #inputMessage{
-height: 3.5rem; 
+height: 3.8rem; 
 font-size: 1.5rem;
 }
 
 #inputMessage::placeholder{
   font-size: 1.5rem;
   }
-  
 
   #messageFather button {
-   height: 4rem;
-   width: 5rem;
+   height: 3.8rem;
+   width: 4rem;
   
   }
   #messageFather button img{

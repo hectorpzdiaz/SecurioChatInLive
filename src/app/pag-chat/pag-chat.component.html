@@ -16,17 +16,22 @@
         </div>
                 
             
-          
-                <div id="dark" #dark>
-                 <div #buttonDark  id="buttonDark" (click)="buttonLight()" >
-                     <img #imgDark src="../../assets/image/day.png">
-                    </div>
-                </div>
-           
+        <img id="menuDarkExit" (click)="menu()"  #menuDarkExit src="../../assets/image/puntosMenu.png">
 
+   
         </header>
      
         <section #ConverssationChat id="ConverssationChat">
+            <div id="contentMenu" #contentMenu>  
+                <div id="dark" #dark>
+                     
+                       <div #buttonDark  id="buttonDark" (click)="buttonLight()" >
+                       <img #imgDark src="../../assets/image/day.png">
+                       </div>
+                      
+                 </div>
+                    <h4 #RouterPrincipal (click)="routerHome()">Pagina principal <img src="../../assets/image/open.png"></h4>
+               </div>
           <div #ContentMessages class="ContentMessages">
             <div class="message left"    *ngFor="let item of messageList"
             [ngClass] ="{
@@ -42,13 +47,13 @@
             </div>
           </div>
             <footer #messageFather id="messageFather">
-                <img id="emoticon" src="../../assets/image/emoticono.png" >
+    
                 
                      <input id="inputMessage"  #inputMessage type="text" placeholder="Mensage..."  [(ngModel)]="messageInput" (keydown.enter)="sendMessageChat()">
              
-                    <button (click)="sendMessageChat()" >
-                    <img src="../../assets/image/iconEnd.png">
-                    </button>
+                     <button (click)="sendMessageChat()" >
+                        <img src="../../assets/image/iconEnd.png">
+                        </button>
     
             </footer>
         </section>

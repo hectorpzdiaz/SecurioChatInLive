@@ -6,6 +6,9 @@ import {ChatMessage} from '../../app/models/chat-message'
 import { HttpClient } from '@angular/common/http';
 import { Subscription } from 'rxjs';
 
+import { Router } from '@angular/router';
+
+
 
 
 
@@ -32,6 +35,12 @@ export class PagChatComponent implements OnInit {
   @ViewChild('inputMessage')inputMessage! : ElementRef
   @ViewChild('contentServer')contentServer! : ElementRef
   @ViewChild('ContentMessages')ContentMessages! : ElementRef
+  @ViewChild('menuDarkExit')menuDarkExit! : ElementRef
+  @ViewChild('contentMenu')contentMenu! : ElementRef
+  @ViewChild('RouterPrincipal')RouterPrincipal! : ElementRef
+
+
+
 
   private sizeWindows = window.innerWidth;
   private userImg : any =""
@@ -50,7 +59,7 @@ export class PagChatComponent implements OnInit {
 
 
 
-  constructor(private chatService : ChatService, private router :  ActivatedRoute , private renderer: Renderer2,private http : HttpClient){}
+  constructor(private chatService : ChatService, private router :  ActivatedRoute , private renderer: Renderer2,private http : HttpClient,private router2 :  Router){}
 
 
   ngAfterViewInit(){
@@ -171,7 +180,6 @@ sendMessageChat(){
  buttonLight(){
     
 
-
  if(this.click == 0){
       
   this.buttonDark.nativeElement.style.transition = "all 0.5s"
@@ -179,13 +187,14 @@ sendMessageChat(){
 
   this.imgDark.nativeElement.src ="../../assets/image/night.png"
 
+  this.ConverssationChat.nativeElement.style.background = "url(../../assets/image/fondoSun.jpg)"
 
 this.dark.nativeElement.style.background ="rgba(50, 43, 115, 1)"
 this.dark.nativeElement.style.backgroundImage ="linear-gradient(180deg, rgba(50, 43, 115, 1) 61%, rgba(73, 69, 76, 1) 100%)"
 this.dark.nativeElement.style.border ="1px solid rgba(37, 34, 209, 0.76)"
 this.dark.nativeElement.style.transition = "all 0.5s"
 
-this.ConverssationChat.nativeElement.style.background = "url(../../assets/image/fondoSun.jpg)"
+this.RouterPrincipal.nativeElement.style.color="black"
 if(this.sizeWindows <= 1299){
   this.ConverssationChat.nativeElement.style.backgroundSize ="75%"
 }else{
@@ -200,11 +209,11 @@ this.headerChat.nativeElement.style.borderBottom ="1px solid rgba(182, 182, 182,
 
 this.contentServer.nativeElement.style.color ="black"
 
+this.contentMenu.nativeElement.style.background ="#EAEAEB"
 
 this.nameUser.nativeElement.style.color="black"
 
-this.inputMessage.nativeElement.style.background = "#eaeaeb"
-this.inputMessage.nativeElement.style.color ="black"
+
 
 
 
@@ -222,24 +231,25 @@ this.dark.nativeElement.style.backgroundImage ="linear-gradient(176deg, rgba(231
 
 this.contentFather.nativeElement.style.background ="rgb(37,42,47)"
 
+this.contentMenu.nativeElement.style.background ="#171A1D"
+
 this.ConverssationChat.nativeElement.style.backgroundImage ="url(../../assets/image/fondChat.jpg)"
 
 if(this.sizeWindows <= 1299){
   this.ConverssationChat.nativeElement.style.backgroundSize ="80%"
 }else{
-  this.ConverssationChat.nativeElement.style.backgroundSize ="35%"
+  this.ConverssationChat.nativeElement.style.backgroundSize ="30%"
 }
 
 
 this.contentServer.nativeElement.style.color ="#dddfe0"
 
+this.RouterPrincipal.nativeElement.style.color="white"
+
 
 this.headerChat.nativeElement.style.background ="#171a1d"
 this.headerChat.nativeElement.style.borderBottom =" 1px solid rgba(255, 255, 255, 0.295)"
 
-
-this.inputMessage.nativeElement.style.background = "rgb(41, 48, 65)"
-this.inputMessage.nativeElement.style.color ="#dddfe0"
 
 this.nameUser.nativeElement.style.color="#dddfe0"
 
@@ -249,5 +259,34 @@ this.nameUser.nativeElement.style.color="#dddfe0"
 this.click--
  }
     }
+
+
+  private clickMenu: boolean= false
+  menu(){
+
+    if(this.clickMenu == false){
+
+    this.contentMenu.nativeElement.style.top= "0rem"
+    this.contentMenu.nativeElement.style.transition= "0.5s  all"
+   
+
+    this.clickMenu = true
+  }else if(this.clickMenu == true){
+    this.contentMenu.nativeElement.style.top= "-10.6rem"
+    this.contentMenu.nativeElement.style.transition= "0.5s  all"
+  
+     this.clickMenu = false
+  }
+
+    
+
+
+  }
+
+
+  routerHome(){
+    this.router2.navigate(["home"])
+ 
+  }
 
 }
